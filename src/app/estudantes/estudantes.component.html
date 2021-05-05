@@ -1,31 +1,27 @@
-<h3>Preview</h3>
-<h2>{{estudante.name | uppercase}} Details</h2>
-<br>
-<div><span>RA: </span> {{estudante.RA}}</div>
-<div><span>Name: </span> {{estudante.name}}</div>
-<div><span>Age: </span> {{estudante.age}}</div>
-<div><span>Course: </span> {{estudante.course}}</div>
-<div><span>Instituion: </span> {{estudante.institution}}</div>
+<h2>Estudantes</h2>
+<ul class="estudantes">
+  <li *ngFor="let estudante of estudantes"
+    [class.selected]="estudante === selectedEstudante"
+    (click)="onSelect(estudante)">
+    <span class="badge">{{estudante.RA}}</span> {{estudante.name}}
+  </li>
+</ul>
 
-<br><br>
-<h3>Register</h3>
-<div>
-    <label for="RA">RA: </label>
-    <input id="RA" [(ngModel)]="estudante.RA" placeholder="RA">
-</div>
-<div>
-    <label for="name">Name: </label>
-    <input id="name" [(ngModel)]="estudante.name" placeholder="name">
-</div>
-<div>
-    <label for="age">Age: </label>
-    <input id="age" [(ngModel)]="estudante.age" placeholder="age">
-</div>
-<div>
-    <label for="course">Course: </label>
-    <input id="course" [(ngModel)]="estudante.course" placeholder="course">
-</div>
-<div>
-    <label for="institution">Institution: </label>
-    <input id="institution" [(ngModel)]="estudante.institution" placeholder="instituion">
+<div *ngIf="selectedEstudante">
+
+  <h2>{{selectedEstudante.name | uppercase}} Details</h2>
+  <div><span>RA: </span>{{selectedEstudante.RA}}</div>
+  <div>
+    <label for="estudante-name">Estudante name: </label>
+    <input id="estudante-name" [(ngModel)]="selectedEstudante.name" placeholder="name">
+    <br>
+    <label for="estudante-age">Estudante age: </label>
+    <input id="estudante-age" [(ngModel)]="selectedEstudante.age" placeholder="age">
+    <br>
+    <label for="estudante-course">Estudante course: </label>
+    <input id="estudante-course" [(ngModel)]="selectedEstudante.course" placeholder="course">
+    <br>
+    <label for="estudante-institution">Estudante institution: </label>
+    <input id="estudante-institution" [(ngModel)]="selectedEstudante.institution" placeholder="institution">
+  </div>
 </div>
