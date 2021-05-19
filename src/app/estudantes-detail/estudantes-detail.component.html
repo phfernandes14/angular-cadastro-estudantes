@@ -1,0 +1,18 @@
+<div *ngIf="estudante">
+
+    <h2>{{estudante.name | uppercase}} Details</h2>
+    <div><span>RA: </span>{{estudante.RA}}</div>
+    <div>
+      <label for="estudante-name">Estudante name: </label>
+      <input id="estudante-name" [(ngModel)]="estudante.name" placeholder="name">
+      <br>
+      <label for="estudante-age">Estudante age: </label>
+      <input id="estudante-age" [(ngModel)]="estudante.age" placeholder="age">
+      <br>
+      <label for="estudante-course">Estudante course: </label>
+      <input id="estudante-course" [(ngModel)]="estudante.course" placeholder="course">
+      <br>
+      <label for="estudante-institution">Estudante institution: </label>
+      <input id="estudante-institution" [(ngModel)]="estudante.institution" placeholder="institution">
+    </div>
+  </div>

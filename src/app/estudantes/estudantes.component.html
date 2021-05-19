@@ -6,22 +6,4 @@
     <span class="badge">{{estudante.RA}}</span> {{estudante.name}}
   </li>
 </ul>
-
-<div *ngIf="selectedEstudante">
-
-  <h2>{{selectedEstudante.name | uppercase}} Details</h2>
-  <div><span>RA: </span>{{selectedEstudante.RA}}</div>
-  <div>
-    <label for="estudante-name">Estudante name: </label>
-    <input id="estudante-name" [(ngModel)]="selectedEstudante.name" placeholder="name">
-    <br>
-    <label for="estudante-age">Estudante age: </label>
-    <input id="estudante-age" [(ngModel)]="selectedEstudante.age" placeholder="age">
-    <br>
-    <label for="estudante-course">Estudante course: </label>
-    <input id="estudante-course" [(ngModel)]="selectedEstudante.course" placeholder="course">
-    <br>
-    <label for="estudante-institution">Estudante institution: </label>
-    <input id="estudante-institution" [(ngModel)]="selectedEstudante.institution" placeholder="institution">
-  </div>
-</div>
+<app-estudantes-detail [estudante]="selectedEstudante"></app-estudantes-detail>
