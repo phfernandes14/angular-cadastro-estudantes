@@ -11,10 +11,8 @@ import { MessageService } from '../message.service';
 export class EstudantesComponent implements OnInit {
 
   estudantes: Estudante[] = [];
-  selectedEstudante?: Estudante;
 
-  constructor(private estudanteService: EstudanteService, private messageService: MessageService) {}
-
+  constructor(private estudanteService: EstudanteService) {}
 
   ngOnInit() {
     this.getEstudantes();
@@ -22,11 +20,7 @@ export class EstudantesComponent implements OnInit {
 
   getEstudantes(): void {
     this.estudanteService.getEstudantes()
-        .subscribe(estudantes => this.estudantes = estudantes);
+    .subscribe(estudantes => this.estudantes = estudantes);
   }
 
-  onSelect(estudante: Estudante): void {
-    this.selectedEstudante = estudante;
-    this.messageService.add(`EstudantesComponent: Selected Estudante RA=${estudante.RA}`);
-  }
 }
