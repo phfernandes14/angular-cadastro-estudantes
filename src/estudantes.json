@@ -1,0 +1,32 @@
+{
+  "estudantes": [
+    {
+      "id": 12350,
+      "name": "Pedro Fernandez",
+      "age": 21,
+      "course": "Análise e Desenvolvimento de Sistemas",
+      "institution": "FATECITU"
+    },
+    {
+      "id": 23845,
+      "name": "Rafaela Silva",
+      "age": 25,
+      "course": "Gestão Empresarial",
+      "institution": "FATECITU"
+    },
+    {
+      "name": "Patricia Lemos",
+      "id": 23846,
+      "age": "25",
+      "course": "Gestão Empresarial",
+      "institution": "FATECITU"
+    },
+    {
+      "name": "João Gilberto",
+      "id": 23847,
+      "age": "25",
+      "course": "Gestão Empresarial",
+      "institution": "FATECITU"
+    }
+  ]
+}
